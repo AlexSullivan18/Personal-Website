@@ -23,19 +23,20 @@
 }
 
 * {
-  padding: 8px;
+  padding: 0.5rem;
 }
 
 html {
   background: linear-gradient(#16152f 50%, #b51a2b);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
   font-size: 16px;
   scrollbar-width: none;
-  
 
-  outline-offset: 10px;
+  outline-offset: 0.625rem;
 }
 
 .topnav {
@@ -63,7 +64,7 @@ html {
 
 header {
   width: 100%;
-  padding: 15px;
+  padding: 0.9375rem;
 
   outline: var(--layer0);
 }
@@ -82,22 +83,39 @@ header {
   outline: var(--layer2);
 }
 
-/* Container for fontawesome icons under name */
-.social-icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px;
+/* Container for fontawesome icons under name and contact info*/
+.personal-info {
+  display: grid;
+  grid: 'icons icons . . contact contact';
 
+  width: 100%;
   outline: var(--layer2);
 }
 
+/*All the personal links*/
+.social-icons{
+grid-area: icons;
+display: flex;
+justify-content: flex-start;
+align-content: center;
+}
+
+/*Contact info in row with social links*/
+#contact-info {
+  color: var(--palette-color4);
+  grid-area: contact;
+  outline: var(--layer3);
+  text-align: center;
+    font-size:1.5rem;
+  padding: 0.625rem;
+}
+
 /* each individial icon */
-#icon a {
+.icon a {
   color: var(--palette-color5);
   font-size: 3rem;
-  padding: 10px;
-
+  padding: 0.625rem;
+  
   outline: var(--layer3);
 }
 
@@ -106,7 +124,7 @@ header {
   border-radius: 50%;
   height: 10%;
   width: 10%;
-  padding-left: 10px;
+  padding-left: 0.625rem;
 
   outline: var(--layer3);
 }
@@ -114,7 +132,6 @@ header {
 main {
   margin-top: 1.25rem;
   width: 100%;
-  
 
   outline: var(--layer0);
 }
@@ -122,18 +139,15 @@ main {
 .body-wrapper1 {
   display: grid;
   column-gap: 1rem;
-  
+
   grid:
     "licences licences skills skills"
     "licences licences skills skills"
     "licences licences skills skills"
     "licences licences skills skills";
 
-    
   color: white;
   font-size: 1rem;
-  
- 
 
   outline: var(--layer1);
 }
@@ -141,9 +155,8 @@ main {
 .licences {
   text-align: center;
   grid-area: licences;
-  
+
   height: 37.5rem;
-  
 
   outline: var(--layer2);
 }
@@ -156,32 +169,7 @@ main {
   outline: var(--layer2);
 }
 
-
-footer {
-  text-align: center;
- 
-  
-border: 1px solid var(--palette-color1);
-  font-size: 1rem;
-  line-height: 2.5rem;
-
-  
-  bottom: 0px;
-  width: 100%;
-  color: var(--palette-color4);
- 
-
-  outline: var(--layer0);
-}
-
-footer>section{
-   background-color: var(--palette-color1);
-   outline: var(--layer);
-}
-
-#contact-info > div > span {
-  text-decoration: underline;
-  font-weight: bold;
-
-  outline: var(--layer3);
+.sub-wrapper {
+  margin-top: 0.625rem;
+  outline: var(--layer4);
 }

@@ -43,23 +43,28 @@ html {
   width: 100%;
   color: var(--palette-color4);
   position: sticky;
+  top: 0rem;
   display: flex;
   flex-direction: row;
 
   justify-content: center;
-
+  background-color: var(--palette-color1);
   outline: 2px dashed orange;
 }
 
 .topnav > a {
   color: var(--palette-color4);
-  background-color: var(--palette-color2);
+  flex: 1;
   text-decoration: none;
   text-align: center;
   font-size: 1.5rem;
   font-style: italic;
 
   outline: var(--layer2);
+}
+
+.topnav > a:hover {
+  color: white;
 }
 
 header {
@@ -86,18 +91,18 @@ header {
 /* Container for fontawesome icons under name and contact info*/
 .personal-info {
   display: grid;
-  grid: 'icons icons . . contact contact';
+  grid: "icons icons . . contact contact";
 
   width: 100%;
   outline: var(--layer2);
 }
 
 /*All the personal links*/
-.social-icons{
-grid-area: icons;
-display: flex;
-justify-content: flex-start;
-align-content: center;
+.social-icons {
+  grid-area: icons;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
 }
 
 /*Contact info in row with social links*/
@@ -106,7 +111,7 @@ align-content: center;
   grid-area: contact;
   outline: var(--layer3);
   text-align: center;
-    font-size:1.5rem;
+  font-size: 1.5rem;
   padding: 0.625rem;
 }
 
@@ -115,7 +120,7 @@ align-content: center;
   color: var(--palette-color5);
   font-size: 3rem;
   padding: 0.625rem;
-  
+
   outline: var(--layer3);
 }
 
@@ -145,6 +150,7 @@ main {
     "licences licences skills skills"
     "licences licences skills skills"
     "licences licences skills skills";
+    
 
   color: white;
   font-size: 1rem;

@@ -124,6 +124,8 @@ header {
   outline: var(--layer3);
 }
 
+
+
 /* inline img headshot */
 #img-headshot {
   border-radius: 50%;
@@ -141,6 +143,7 @@ main {
   outline: var(--layer0);
 }
 
+/* container for subgrid for licences and skills */
 .body-wrapper1 {
   display: grid;
   column-gap: 1rem;
@@ -158,8 +161,8 @@ main {
   outline: var(--layer1);
 }
 
-.licences {
-  text-align: center;
+.left-box {
+  
   grid-area: licences;
 
   height: 37.5rem;
@@ -167,15 +170,20 @@ main {
   outline: var(--layer2);
 }
 
-.skills {
-  text-align: center;
+.right-box { 
   grid-area: skills;
   height: 37.5rem;
 
   outline: var(--layer2);
 }
 
+/* wrapper for content within each individual subsection */
 .sub-wrapper {
   margin-top: 0.625rem;
   outline: var(--layer4);
+}
+
+th{
+  text-decoration: underline;
+  font-size: 1.5rem;
 }
